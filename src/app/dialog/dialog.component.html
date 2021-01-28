@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Edit debtor</h2>
+<mat-dialog-content class="mat-typography">
+  <div class="mat-card-box example-full-width">
+    <mat-form-field class="example-50-width">
+      <mat-label>Full Name</mat-label>
+      <input [(ngModel)]="data.element.name" matInput placeholder="Ex... Andrey Minaev">
+    </mat-form-field>
+    <mat-form-field class="example-50-width">
+      <mat-label>How much should</mat-label>
+      <input [(ngModel)]="data.element.money" matInput placeholder="Ex... 100$">
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="{data: data.element, info: 'edit'}" cdkFocusInitial>Edit</button>
+  <button mat-button [mat-dialog-close]="{data: data.element, info: 'delete'}" cdkFocusInitial>Delete</button>
+</mat-dialog-actions>
